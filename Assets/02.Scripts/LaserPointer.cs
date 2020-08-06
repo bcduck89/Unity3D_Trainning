@@ -70,7 +70,18 @@ public class LaserPointer : MonoBehaviour
                                     , new PointerEventData(EventSystem.current)
                                     , ExecuteEvents.pointerExitHandler);
                 prevButton = currButton;
+            }
+            else
+            {
+                if (prevButton != null)
+                {
+                    //Previous Button Send Event
+                    ExeuteEvents.Execute( prevButton
+                                        , new PointerEventData(EventSystem.current)
+                                        , Executeevents.pointerExitHandler);
 
+                    )
+                }
             }
         }
     }
